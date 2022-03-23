@@ -1,0 +1,56 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libsystem_malloc.dylib        	0x00007fff2020a927 small_free_list_remove_ptr.cold.2 + 0
+1   libsystem_malloc.dylib        	0x00007fff201eea5a small_free_list_remove_ptr + 182
+2   libsystem_malloc.dylib        	0x00007fff201ea006 small_malloc_from_free_list + 289
+3   libsystem_malloc.dylib        	0x00007fff201e9877 small_malloc_should_clear + 259
+4   libsystem_malloc.dylib        	0x00007fff201e9692 szone_malloc_should_clear + 109
+5   com.apple.music.apps.MAAudioEngine	0x0000000114850e73 0x1143c0000 + 4787827
+6   libsystem_malloc.dylib        	0x00007fff20202f3b _malloc_zone_malloc + 118
+7   libicucore.A.dylib            	0x00007fff226eef76 icu::number::impl::SymbolsWrapper::setTo(icu::DecimalFormatSymbols const&) + 38
+8   libicucore.A.dylib            	0x00007fff226f465e 0x7fff225a8000 + 1361502
+9   libicucore.A.dylib            	0x00007fff226f529d 0x7fff225a8000 + 1364637
+10  libicucore.A.dylib            	0x00007fff226a5efa icu::DecimalFormat::touch(UErrorCode&) + 142
+11  libicucore.A.dylib            	0x00007fff226a9ba9 icu::DecimalFormat::setMaximumFractionDigits(int) + 71
+12  com.apple.CoreFoundation      	0x00007fff204e4d9a __cficu_unum_setAttribute + 24
+13  com.apple.CoreFoundation      	0x00007fff204e544d CFNumberFormatterSetProperty + 1129
+14  com.apple.CoreFoundation      	0x00007fff2046b0c4 __CFStringAppendFormatCore + 13234
+15  com.apple.CoreFoundation      	0x00007fff20598f5f _CFStringCreateWithFormatAndArgumentsReturningMetadata + 158
+16  com.apple.CoreFoundation      	0x00007fff20467d0b _CFStringCreateWithFormatAndArgumentsAux2 + 20
+17  com.apple.Foundation          	0x00007fff21254546 +[NSString localizedStringWithFormat:] + 185
+18  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x000000010fd50734 CheckScoreColors(CSong*, SCORESETTINGS*) + 116
+19  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x0000000110209e00 CSongScoreSettings::ValidateScoreSettings() + 3248
+20  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x000000011020a7de CSongScoreSettings::GetScoreSettings(bool) + 286
+21  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x000000010fbf757c ScFonts_checkSongFontID(CSong*) + 44
+22  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x0000000110162d8c CSongScore::ScoreSongInit() + 364
+23  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x000000010f0dbefd build_memory(CSong*, CDocumentLogic*, TBuildMemInit, long) + 5005
+24  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x000000010f554894 CDocumentLogic::SongOpen() + 500
+25  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x000000010f5569cb AppInitDocument(CDocumentLogic*, InitMode) + 123
+26  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x000000010fbe87e7 0x10f02a000 + 12314599
+27  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x000000010fbe9988 0x10f02a000 + 12319112
+28  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x00000001103c47bc 0x10f02a000 + 20555708
+29  com.apple.AppKit              	0x00007fff2324df18 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 808
+30  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x00000001108df22c 0x10f02a000 + 25907756
+31  com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+32  com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+33  com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+34  com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+35  com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+36  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+37  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+38  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+39  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+40  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+41  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+42  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+43  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+44  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+45  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+46  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+47  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+48  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x00000001108e8070 0x10f02a000 + 25944176
+49  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+50  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+51  06d0259c-4241-11ec-9a85-a78d4eb8e4d1.mid	0x000000010fb6f79d main + 333
+52  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:

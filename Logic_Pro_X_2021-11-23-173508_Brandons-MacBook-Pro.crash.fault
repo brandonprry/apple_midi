@@ -1,0 +1,30 @@
+Thread 0 Crashed:
+0   id:000053,src:000000,op:havoc,rep:8,+cov.mid	0x0000000106e98f6d 0x1062db000 + 12312429
+1   id:000053,src:000000,op:havoc,rep:8,+cov.mid	0x0000000106e9a988 0x1062db000 + 12319112
+2   id:000053,src:000000,op:havoc,rep:8,+cov.mid	0x00000001076757bc 0x1062db000 + 20555708
+3   com.apple.AppKit              	0x00007fff23307f18 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 808
+4   id:000053,src:000000,op:havoc,rep:8,+cov.mid	0x0000000107b9022c 0x1062db000 + 25907756
+5   com.apple.Foundation          	0x00007fff212e449f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+6   com.apple.Foundation          	0x00007fff212e4397 -[NSBlockOperation main] + 98
+7   com.apple.Foundation          	0x00007fff212e432a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+8   com.apple.Foundation          	0x00007fff212e35de -[NSOperation start] + 785
+9   com.apple.Foundation          	0x00007fff212e32af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+10  com.apple.Foundation          	0x00007fff212e3182 __NSOQSchedule_f + 182
+11  libdispatch.dylib             	0x00007fff202de19e 0x7fff202ce000 + 65950
+12  libdispatch.dylib             	0x00007fff202d1806 0x7fff202ce000 + 14342
+13  libdispatch.dylib             	0x00007fff202ddb4f 0x7fff202ce000 + 64335
+14  com.apple.CoreFoundation      	0x00007fff205b15a8 0x7fff204f3000 + 779688
+15  com.apple.CoreFoundation      	0x00007fff205737a2 0x7fff204f3000 + 526242
+16  com.apple.CoreFoundation      	0x00007fff2057261c 0x7fff204f3000 + 521756
+17  com.apple.HIToolbox           	0x00007fff287b8a83 RunCurrentEventLoopInMode + 292
+18  com.apple.HIToolbox           	0x00007fff287b87e5 ReceiveNextEventCommon + 587
+19  com.apple.HIToolbox           	0x00007fff287b8583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+20  com.apple.AppKit              	0x00007fff22d7a172 _DPSNextEvent + 864
+21  com.apple.AppKit              	0x00007fff22d78945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+22  id:000053,src:000000,op:havoc,rep:8,+cov.mid	0x0000000107b99070 0x1062db000 + 25944176
+23  com.apple.AppKit              	0x00007fff22d6ac69 -[NSApplication run] + 586
+24  com.apple.AppKit              	0x00007fff22d3ee6c NSApplicationMain + 816
+25  id:000053,src:000000,op:havoc,rep:8,+cov.mid	0x0000000106e2079d 0x1062db000 + 11818909
+26  libdyld.dylib                 	0x00007fff20496f3d start + 1
+
+Thread 1:

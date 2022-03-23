@@ -1,0 +1,39 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   com.apple.music.apps.MADSP    	0x00000001088689fb CKnockShell::~CKnockShell() + 139
+1   com.apple.music.apps.MADSP    	0x000000010886755e CKnockShell::~CKnockShell() + 14
+2   com.apple.music.apps.MAAudioEngine	0x0000000109ec3dfa MDPlugSteffan::~MDPlugSteffan() + 74
+3   com.apple.music.apps.MAAudioEngine	0x0000000109ec06ee MDPlugSteffan::~MDPlugSteffan() + 14
+4   com.apple.music.apps.MAAudioEngine	0x0000000109e66389 MD::DisposePlug(CPlugIn*) + 681
+5   070d9c10-4241-11ec-ba6c-7fb6e1b7a5ea.mid	0x0000000104bc139a 0x104853000 + 3597210
+6   070d9c10-4241-11ec-ba6c-7fb6e1b7a5ea.mid	0x0000000104a0a781 0x104853000 + 1800065
+7   070d9c10-4241-11ec-ba6c-7fb6e1b7a5ea.mid	0x0000000104ad9595 FindFreeAudioChannel(CSong*, TAuConfType, short, bool*, bool, TGInstID (*)(void*, void*, unsigned int), void*, void*, std::__1::set<TGInstID, std::__1::less<TGInstID>, std::__1::allocator<TGInstID> >*) + 2165
+8   070d9c10-4241-11ec-ba6c-7fb6e1b7a5ea.mid	0x0000000104a83a97 MidiTracksToSoftwareInstrumentTracks(CSong*, int, TTrackNr, unsigned long, bool, NSMutableDictionary*) + 2295
+9   070d9c10-4241-11ec-ba6c-7fb6e1b7a5ea.mid	0x0000000105411a32 0x104853000 + 12315186
+10  070d9c10-4241-11ec-ba6c-7fb6e1b7a5ea.mid	0x0000000105412988 0x104853000 + 12319112
+11  070d9c10-4241-11ec-ba6c-7fb6e1b7a5ea.mid	0x0000000105bed7bc 0x104853000 + 20555708
+12  com.apple.AppKit              	0x00007fff2324df18 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 808
+13  070d9c10-4241-11ec-ba6c-7fb6e1b7a5ea.mid	0x000000010610822c 0x104853000 + 25907756
+14  com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+15  com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+16  com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+17  com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+18  com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+19  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+20  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+21  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+22  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+23  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+24  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+25  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+26  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+27  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+28  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+29  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+30  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+31  070d9c10-4241-11ec-ba6c-7fb6e1b7a5ea.mid	0x0000000106111070 0x104853000 + 25944176
+32  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+33  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+34  070d9c10-4241-11ec-ba6c-7fb6e1b7a5ea.mid	0x000000010539879d main + 333
+35  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:

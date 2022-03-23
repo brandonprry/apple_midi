@@ -1,0 +1,61 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libsystem_kernel.dylib        	0x00007fff2039292e __pthread_kill + 10
+1   libsystem_pthread.dylib       	0x00007fff203c15bd pthread_kill + 263
+2   libsystem_c.dylib             	0x00007fff20316406 abort + 125
+3   libsystem_malloc.dylib        	0x00007fff201f6165 malloc_vreport + 548
+4   libsystem_malloc.dylib        	0x00007fff2020a7e9 malloc_zone_error + 183
+5   libsystem_malloc.dylib        	0x00007fff201eef58 small_free_list_remove_ptr_no_clear + 1270
+6   libsystem_malloc.dylib        	0x00007fff201ea04c small_malloc_from_free_list + 359
+7   libsystem_malloc.dylib        	0x00007fff201e9877 small_malloc_should_clear + 259
+8   libsystem_malloc.dylib        	0x00007fff201e9692 szone_malloc_should_clear + 109
+9   com.apple.music.apps.MAAudioEngine	0x000000010aabae73 0x10a62a000 + 4787827
+10  libsystem_malloc.dylib        	0x00007fff20202f3b _malloc_zone_malloc + 118
+11  libc++abi.dylib               	0x00007fff2038682a operator new(unsigned long) + 26
+12  libc++.1.dylib                	0x00007fff2035a460 std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) + 138
+13  libc++.1.dylib                	0x00007fff2035ae54 std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::push_back(char) + 92
+14  com.apple.LaunchServices      	0x00007fff208ddad7 std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) + 107
+15  libc++.1.dylib                	0x00007fff2032d1fb std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long) + 109
+16  com.apple.LaunchServices      	0x00007fff208dda47 std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) + 283
+17  com.apple.LaunchServices      	0x00007fff208dd8f5 std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long) + 199
+18  com.apple.LaunchServices      	0x00007fff208dc6b1 asString(void const*) + 1029
+19  com.apple.LaunchServices      	0x00007fff20a3a8cb copyApplicationInformationDictionaryGivenASNUsingLocalCache(__LSSharedMemoryPage const*, __LSASN const*) + 1516
+20  com.apple.LaunchServices      	0x00007fff208e18a0 _LSCopyApplicationInformation + 907
+21  com.apple.AppKit              	0x00007fff22cbd6bc -[NSRunningApplication _fetchDynamicProperties] + 484
+22  com.apple.AppKit              	0x00007fff236909b0 -[NSRunningApplication isActive] + 50
+23  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x00000001063269e3 0x10528d000 + 17406435
+24  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x0000000106326b31 0x10528d000 + 17406769
+25  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x0000000106326e12 0x10528d000 + 17407506
+26  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x00000001063247bc 0x10528d000 + 17397692
+27  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x000000010636527c CSongAudio::ClemensSongInit(TLogicSongVersion) + 540
+28  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x000000010533ef33 build_memory(CSong*, CDocumentLogic*, TBuildMemInit, long) + 5059
+29  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x00000001057b7894 CDocumentLogic::SongOpen() + 500
+30  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x00000001057b99cb AppInitDocument(CDocumentLogic*, InitMode) + 123
+31  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x0000000105e4b7e7 0x10528d000 + 12314599
+32  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x0000000105e4c988 0x10528d000 + 12319112
+33  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x00000001066277bc 0x10528d000 + 20555708
+34  com.apple.AppKit              	0x00007fff2324df18 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 808
+35  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x0000000106b4222c 0x10528d000 + 25907756
+36  com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+37  com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+38  com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+39  com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+40  com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+41  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+42  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+43  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+44  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+45  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+46  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+47  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+48  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+49  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+50  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+51  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+52  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+53  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x0000000106b4b070 0x10528d000 + 25944176
+54  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+55  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+56  05d84822-4241-11ec-9486-539ea5ab266b.mid	0x0000000105dd279d main + 333
+57  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:

@@ -1,0 +1,65 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libsystem_kernel.dylib        	0x00007fff2039292e __pthread_kill + 10
+1   libsystem_pthread.dylib       	0x00007fff203c15bd pthread_kill + 263
+2   libsystem_c.dylib             	0x00007fff20316406 abort + 125
+3   libsystem_malloc.dylib        	0x00007fff201f6165 malloc_vreport + 548
+4   libsystem_malloc.dylib        	0x00007fff2020a7e9 malloc_zone_error + 183
+5   libsystem_malloc.dylib        	0x00007fff201eef58 small_free_list_remove_ptr_no_clear + 1270
+6   libsystem_malloc.dylib        	0x00007fff201ebed9 free_small + 634
+7   com.apple.Foundation          	0x00007fff21207084 -[NSXPCCoder dealloc] + 73
+8   com.apple.Foundation          	0x00007fff2120701e -[NSXPCEncoder dealloc] + 134
+9   com.apple.Foundation          	0x00007fff21204ea1 -[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:] + 1838
+10  com.apple.Foundation          	0x00007fff21204764 -[NSXPCConnection _sendInvocation:withProxy:] + 94
+11  com.apple.CoreFoundation      	0x00007fff2049c5f6 ___forwarding___ + 723
+12  com.apple.CoreFoundation      	0x00007fff2049c298 _CF_forwarding_prep_0 + 120
+13  libFontRegistry.dylib         	0x00007fff26f2c7c2 __61-[XTypeXPCClient XTCopyPropertiesForFont:keys:scope:options:]_block_invoke + 104
+14  libFontRegistry.dylib         	0x00007fff26f2ac8f -[XTypeXPCClient run:errorHandler:] + 87
+15  libFontRegistry.dylib         	0x00007fff26f2c71c -[XTypeXPCClient XTCopyPropertiesForFont:keys:scope:options:] + 191
+16  libFontRegistry.dylib         	0x00007fff26f06c1c XTCopyPropertiesForFont + 180
+17  com.apple.CoreText            	0x00007fff219e1dd4 TBaseFont::CopyXTProperties(__CFSet const*, bool) const + 78
+18  com.apple.CoreText            	0x00007fff219e1ca4 TBaseFont::DetermineFontFlags(unsigned int) const + 466
+19  com.apple.CoreText            	0x00007fff21a09ce4 TBaseFont::IsAppleFont() const + 32
+20  com.apple.CoreText            	0x00007fff21a09b30 ConvertToMorxAsync(__CTFont const*) + 94
+21  com.apple.CoreText            	0x00007fff21a124e0 TASCIIEncoder::Encode() + 44
+22  com.apple.CoreText            	0x00007fff21a11e8a TGlyphEncoder::EncodeChars(CFRange, TAttributes const&, TGlyphEncoder::Fallbacks) + 1160
+23  com.apple.CoreText            	0x00007fff21a114d6 TTypesetterAttrString::Initialize(__CFAttributedString const*) + 310
+24  com.apple.CoreText            	0x00007fff21a111df TTypesetterAttrString::TTypesetterAttrString(__CFAttributedString const*, __CFDictionary const*) + 163
+25  com.apple.CoreText            	0x00007fff21a11065 CTLineCreateWithAttributedString + 85
+26  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x00000001090de1d0 GCTextStyle::createLine(__CFString const*, double) const + 176
+27  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x00000001090de987 GCTextStyleContainer::createLineWithText(GCTextAttributes const*, __CFString const*, double) + 311
+28  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x000000010960b47b GC::textRect(unsigned short const*, unsigned long, CGRect*, double) + 235
+29  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x00000001098bd4a6 SetTextEventExtent(CSong*, CEvWithExt_Text*, ScEditor*) + 326
+30  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x00000001093f8c50 CSongTextStyle::SeqTextStyleChange(CMSeq*, short) + 544
+31  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x0000000108ac324d ReadMidiFile(CSong*, void const*, long, int, TPureLength, long, NSString*, TGInstID*) + 2397
+32  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x0000000108ac26ce ConvertMidiFileToSong(CSong*, MAMem const*, char, char, char, int, long, long, NSString*, TGInstID*) + 366
+33  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x0000000108ac24bc ConvertMemContainingMidiOrNotatorFileToLogicSong(MAMem&, NSString*) + 204
+34  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x0000000108ac238b ConvertDataContainingMidiOrNotatorFileToLogicDoc(NSData*, NSString*, CDocumentLogic*) + 155
+35  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x0000000108e437c7 0x108285000 + 12314567
+36  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x0000000108e44988 0x108285000 + 12319112
+37  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x000000010961f7bc 0x108285000 + 20555708
+38  com.apple.AppKit              	0x00007fff2324df18 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 808
+39  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x0000000109b3a22c 0x108285000 + 25907756
+40  com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+41  com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+42  com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+43  com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+44  com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+45  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+46  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+47  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+48  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+49  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+50  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+51  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+52  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+53  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+54  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+55  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+56  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+57  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x0000000109b43070 0x108285000 + 25944176
+58  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+59  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+60  051092a0-4241-11ec-87f7-7bc2bdca44a1.mid	0x0000000108dca79d main + 333
+61  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:

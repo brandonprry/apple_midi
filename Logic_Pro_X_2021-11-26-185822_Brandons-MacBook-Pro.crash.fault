@@ -1,0 +1,61 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libsystem_kernel.dylib        	0x00007fff2039292e __pthread_kill + 10
+1   libsystem_pthread.dylib       	0x00007fff203c15bd pthread_kill + 263
+2   libsystem_c.dylib             	0x00007fff20316406 abort + 125
+3   libsystem_malloc.dylib        	0x00007fff201f6165 malloc_vreport + 548
+4   libsystem_malloc.dylib        	0x00007fff2020a7e9 malloc_zone_error + 183
+5   libsystem_malloc.dylib        	0x00007fff201eef58 small_free_list_remove_ptr_no_clear + 1270
+6   libsystem_malloc.dylib        	0x00007fff201ebf4c free_small + 749
+7   libobjc.A.dylib               	0x00007fff2026e570 cache_t::collectNolock(bool) + 212
+8   libobjc.A.dylib               	0x00007fff2026e3bd cache_t::insert(objc_selector*, void (*)(), objc_object*) + 389
+9   libobjc.A.dylib               	0x00007fff20260b77 lookUpImpOrForward + 541
+10  libobjc.A.dylib               	0x00007fff2026039b _objc_msgSend_uncached + 75
+11  04fd56b8-4241-11ec-9006-5f2c51da0b79.mid	0x000000011068bfe3 0x10ff88000 + 7356387
+12  04fd56b8-4241-11ec-9006-5f2c51da0b79.mid	0x000000011068a4e3 0x10ff88000 + 7349475
+13  com.apple.AppKit              	0x00007fff22e1300a -[NSViewController _sendViewDidAppear] + 41
+14  com.apple.AppKit              	0x00007fff235630cb -[NSView _windowDidOrderOnScreen] + 67
+15  com.apple.AppKit              	0x00007fff23563161 -[NSView _windowDidOrderOnScreen] + 217
+16  com.apple.AppKit              	0x00007fff23563161 -[NSView _windowDidOrderOnScreen] + 217
+17  com.apple.AppKit              	0x00007fff23563161 -[NSView _windowDidOrderOnScreen] + 217
+18  com.apple.AppKit              	0x00007fff23563161 -[NSView _windowDidOrderOnScreen] + 217
+19  com.apple.AppKit              	0x00007fff23563161 -[NSView _windowDidOrderOnScreen] + 217
+20  com.apple.AppKit              	0x00007fff23563161 -[NSView _windowDidOrderOnScreen] + 217
+21  com.apple.AppKit              	0x00007fff23563161 -[NSView _windowDidOrderOnScreen] + 217
+22  com.apple.AppKit              	0x00007fff22e0aaec -[NSWindow _reallyDoOrderWindowAboveOrBelow:relativeTo:findKey:forCounter:force:isModal:] + 2180
+23  com.apple.AppKit              	0x00007fff22e09f10 -[NSWindow _reallyDoOrderWindow:relativeTo:findKey:forCounter:force:isModal:] + 135
+24  com.apple.AppKit              	0x00007fff22e08f07 -[NSWindow _doOrderWindow:relativeTo:findKey:forCounter:force:isModal:] + 289
+25  com.apple.AppKit              	0x00007fff22e08d84 -[NSWindow orderWindow:relativeTo:] + 155
+26  com.apple.AppKit              	0x00007fff22dfc9cd -[NSWindow makeKeyAndOrderFront:] + 60
+27  com.apple.QuickLookUIFramework	0x00007fff38441456 -[QLSeamlessDocumentOpener showWindow:contentFrame:withBlock:] + 132
+28  com.apple.AppKit              	0x00007fff22f143e0 -[NSWindowController showWindow:] + 675
+29  04fd56b8-4241-11ec-9006-5f2c51da0b79.mid	0x0000000110d8bded 0x10ff88000 + 14695917
+30  04fd56b8-4241-11ec-9006-5f2c51da0b79.mid	0x0000000110d8c4d3 CreateDocwEditorWindow(CLgSongDocument*, WindowTypeID, CLgDocwState*, CLgCachedScreenSpace*) + 211
+31  04fd56b8-4241-11ec-9006-5f2c51da0b79.mid	0x0000000110d85160 0x10ff88000 + 14668128
+32  04fd56b8-4241-11ec-9006-5f2c51da0b79.mid	0x0000000110aeca70 0x10ff88000 + 11946608
+33  com.apple.AppKit              	0x00007fff23247e9c -[NSDocumentController _finishOpeningDocument:andShowWindows:] + 75
+34  com.apple.AppKit              	0x00007fff2324df80 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 912
+35  04fd56b8-4241-11ec-9006-5f2c51da0b79.mid	0x000000011183d22c 0x10ff88000 + 25907756
+36  com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+37  com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+38  com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+39  com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+40  com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+41  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+42  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+43  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+44  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+45  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+46  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+47  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+48  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+49  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+50  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+51  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+52  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+53  04fd56b8-4241-11ec-9006-5f2c51da0b79.mid	0x0000000111846070 0x10ff88000 + 25944176
+54  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+55  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+56  04fd56b8-4241-11ec-9006-5f2c51da0b79.mid	0x0000000110acd79d main + 333
+57  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:

@@ -1,0 +1,58 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libFontParser.dylib           	0x00007fff285eb8d7 TFPFont::CopyGlyphPath(unsigned short, CGAffineTransform const*) const + 151
+1   libFontParser.dylib           	0x00007fff285e7f0b TFPFont::GetGlyphIdealBounds(unsigned short) const + 245
+2   libFontParser.dylib           	0x00007fff28577d73 FPFontGetGlyphIdealBounds + 14
+3   com.apple.CoreGraphics        	0x00007fff24fcd4e3 xt_font_get_glyph_bboxes + 244
+4   com.apple.CoreText            	0x00007fff219e6bb3 TFont::GetBoundingBoxesForGlyphs(unsigned short const*, CGRect*, long, CTFontOrientation) const + 133
+5   com.apple.CoreText            	0x00007fff219e6895 CTFontGetBoundingRectsForGlyphs + 217
+6   com.apple.UIFoundation        	0x00007fff23a48e85 -[NSFont getBoundingRects:forCGGlyphs:count:] + 83
+7   com.apple.UIFoundation        	0x00007fff23b6596e -[NSFont boundingRectForCGGlyph:] + 80
+8   com.apple.UIFoundation        	0x00007fff23b65a27 -[NSFont boundingRectForGlyph:] + 102
+9   com.apple.LogicUIKit          	0x000000010f46fffa 0x10f317000 + 1413114
+10  com.apple.LogicUIKit          	0x000000010f474c8a 0x10f317000 + 1432714
+11  com.apple.LogicUIKit          	0x000000010f45f0ff 0x10f317000 + 1343743
+12  com.apple.LogicUIKit          	0x000000010f45f61b 0x10f317000 + 1345051
+13  com.apple.AppKit              	0x00007fff2355d6de -[NSView _updateTrackingAreasWithInvalidCursorRects:] + 124
+14  com.apple.AppKit              	0x00007fff2355df10 -[NSView _updateTrackingAreasWithInvalidCursorRects:] + 2222
+15  com.apple.AppKit              	0x00007fff2355df10 -[NSView _updateTrackingAreasWithInvalidCursorRects:] + 2222
+16  com.apple.AppKit              	0x00007fff2355df10 -[NSView _updateTrackingAreasWithInvalidCursorRects:] + 2222
+17  com.apple.AppKit              	0x00007fff2355df10 -[NSView _updateTrackingAreasWithInvalidCursorRects:] + 2222
+18  com.apple.AppKit              	0x00007fff2355df10 -[NSView _updateTrackingAreasWithInvalidCursorRects:] + 2222
+19  com.apple.AppKit              	0x00007fff2355df10 -[NSView _updateTrackingAreasWithInvalidCursorRects:] + 2222
+20  com.apple.AppKit              	0x00007fff22da07a1 _NSWindowDisplayCycleUpdateStructuralRegions + 212
+21  com.apple.AppKit              	0x00007fff22d9b60f __NSWindowGetDisplayCycleObserverForUpdateStructuralRegions_block_invoke + 420
+22  com.apple.AppKit              	0x00007fff22d94ea5 NSDisplayCycleObserverInvoke + 155
+23  com.apple.AppKit              	0x00007fff22d94a30 NSDisplayCycleFlush + 953
+24  com.apple.QuartzCore          	0x00007fff26c2ac86 CA::Transaction::run_commit_handlers(CATransactionPhase) + 92
+25  com.apple.QuartzCore          	0x00007fff26c29a1d CA::Transaction::commit() + 375
+26  053a5c02-4241-11ec-864b-eff967c3167a.mid	0x000000010839fe41 0x10759c000 + 14696001
+27  053a5c02-4241-11ec-864b-eff967c3167a.mid	0x00000001083a04d3 CreateDocwEditorWindow(CLgSongDocument*, WindowTypeID, CLgDocwState*, CLgCachedScreenSpace*) + 211
+28  053a5c02-4241-11ec-864b-eff967c3167a.mid	0x0000000108399160 0x10759c000 + 14668128
+29  053a5c02-4241-11ec-864b-eff967c3167a.mid	0x0000000108100a70 0x10759c000 + 11946608
+30  com.apple.AppKit              	0x00007fff23247e9c -[NSDocumentController _finishOpeningDocument:andShowWindows:] + 75
+31  com.apple.AppKit              	0x00007fff2324df80 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 912
+32  053a5c02-4241-11ec-864b-eff967c3167a.mid	0x0000000108e5122c 0x10759c000 + 25907756
+33  com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+34  com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+35  com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+36  com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+37  com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+38  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+39  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+40  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+41  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+42  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+43  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+44  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+45  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+46  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+47  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+48  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+49  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+50  053a5c02-4241-11ec-864b-eff967c3167a.mid	0x0000000108e5a070 0x10759c000 + 25944176
+51  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+52  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+53  053a5c02-4241-11ec-864b-eff967c3167a.mid	0x00000001080e179d main + 333
+54  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:

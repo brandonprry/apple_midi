@@ -1,0 +1,82 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libsystem_kernel.dylib        	0x00007fff2039292e __pthread_kill + 10
+1   libsystem_pthread.dylib       	0x00007fff203c15bd pthread_kill + 263
+2   libsystem_c.dylib             	0x00007fff20316406 abort + 125
+3   libsystem_malloc.dylib        	0x00007fff201f6165 malloc_vreport + 548
+4   libsystem_malloc.dylib        	0x00007fff2020a7e9 malloc_zone_error + 183
+5   libsystem_malloc.dylib        	0x00007fff201eef58 small_free_list_remove_ptr_no_clear + 1270
+6   libsystem_malloc.dylib        	0x00007fff201ea04c small_malloc_from_free_list + 359
+7   libsystem_malloc.dylib        	0x00007fff201e9877 small_malloc_should_clear + 259
+8   libsystem_malloc.dylib        	0x00007fff201e9692 szone_malloc_should_clear + 109
+9   com.apple.music.apps.MAAudioEngine	0x0000000108c10e73 0x108780000 + 4787827
+10  libsystem_malloc.dylib        	0x00007fff20202f3b _malloc_zone_malloc + 118
+11  libc++abi.dylib               	0x00007fff2038682a operator new(unsigned long) + 26
+12  com.apple.CoreText            	0x00007fff219fd91f OTL::GPOS::ApplyPairPosAccelerated(OTL::Lookup const&, TGlyphIterator&) const + 1983
+13  com.apple.CoreText            	0x00007fff219fc2db OTL::GPOS::ApplyLookups(TRunGlue&, int, OTL::GlyphLookups&, unsigned short) const + 529
+14  com.apple.CoreText            	0x00007fff219fb81f TOpenTypePositioningEngine::PositionRuns(SyncState&, KerningStatus&) + 1967
+15  com.apple.CoreText            	0x00007fff21a73388 TKerningEngine::PositionGlyphs(TRunGlue&, ShapingType, __CFString const*, TCharStream const*, unsigned long) + 370
+16  com.apple.CoreText            	0x00007fff219f0eaf CTFontTransformGlyphs + 479
+17  com.apple.UIFoundation        	0x00007fff23aab311 -[NSCoreTypesetter _NSFastDrawString:length:attributes:paragraphStyle:typesetterBehavior:lineBreakMode:rect:padding:graphicsContext:baselineRendering:usesFontLeading:usesScreenFont:scrollable:syncAlignment:mirrored:boundingRectPointer:baselineOffsetPointer:drawingContext:] + 6463
+18  com.apple.UIFoundation        	0x00007fff23aababf -[NSCoreTypesetter _stringDrawingCoreTextEngineWithOriginalString:rect:padding:graphicsContext:forceClipping:attributes:stringDrawingOptions:drawingContext:stringDrawingInterface:] + 1340
+19  com.apple.UIFoundation        	0x00007fff239d644b __NSStringDrawingEngine + 3193
+20  com.apple.UIFoundation        	0x00007fff23a06d20 _NSStringDrawingCore + 173
+21  com.apple.AppKit              	0x00007fff22e2a59f _NSDrawTextCell + 3705
+22  com.apple.AppKit              	0x00007fff22ecc9e7 -[NSTextFieldCell drawInteriorWithFrame:inView:] + 791
+23  com.apple.AppKit              	0x00007fff22ecc6c0 __40-[NSTextFieldCell drawWithFrame:inView:]_block_invoke + 399
+24  com.apple.AppKit              	0x00007fff22cace95 +[NSAppearance _performWithCurrentAppearance:usingBlock:] + 66
+25  com.apple.AppKit              	0x00007fff22ecc4ff -[NSTextFieldCell drawWithFrame:inView:] + 210
+26  com.apple.AppKit              	0x00007fff22e3067e -[NSControl drawRect:] + 232
+27  com.apple.AppKit              	0x00007fff22e3046b _NSViewDrawRect + 139
+28  com.apple.AppKit              	0x00007fff235621ef -[NSView _recursive:displayRectIgnoringOpacity:inContext:stopAtLayerBackedViews:] + 2115
+29  com.apple.AppKit              	0x00007fff2356258a -[NSView _recursive:displayRectIgnoringOpacity:inContext:stopAtLayerBackedViews:] + 3038
+30  com.apple.AppKit              	0x00007fff2356258a -[NSView _recursive:displayRectIgnoringOpacity:inContext:stopAtLayerBackedViews:] + 3038
+31  com.apple.AppKit              	0x00007fff22e2fa85 -[NSView(NSLayerKitGlue) _drawViewBackingLayer:inContext:drawingHandler:] + 967
+32  com.apple.QuartzCore          	0x00007fff26c4a271 CABackingStoreUpdate_ + 219
+33  com.apple.QuartzCore          	0x00007fff26cb184d invocation function for block in CA::Layer::display_() + 53
+34  com.apple.QuartzCore          	0x00007fff26c49787 -[CALayer _display] + 2247
+35  com.apple.AppKit              	0x00007fff22e2f5f5 -[_NSBackingLayer display] + 475
+36  com.apple.AppKit              	0x00007fff22d9a6e2 -[_NSViewBackingLayer display] + 555
+37  com.apple.QuartzCore          	0x00007fff26c486f3 CA::Layer::display_if_needed(CA::Transaction*) + 863
+38  com.apple.QuartzCore          	0x00007fff26d93bee CA::Context::commit_transaction(CA::Transaction*, double, double*) + 666
+39  com.apple.QuartzCore          	0x00007fff26c29b6f CA::Transaction::commit() + 713
+40  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x000000010417e940 0x1033ee000 + 14223680
+41  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x0000000104485943 0x1033ee000 + 17398083
+42  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x00000001036b1225 CProgressBar::setProgress(long, long, NSString*, NSString*, short) + 325
+43  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x000000010375d696 0x1033ee000 + 3602070
+44  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x00000001035a4b05 0x1033ee000 + 1796869
+45  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x00000001035a3638 0x1033ee000 + 1791544
+46  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x00000001035a12d5 AudioCompile(short, TAudioCompileMode, void*, int) + 4437
+47  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x0000000103575822 CheckAndInitAudioConf(CSong*) + 466
+48  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x00000001044c63da CSongAudio::ClemensSongInit(TLogicSongVersion) + 890
+49  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x000000010349ff33 build_memory(CSong*, CDocumentLogic*, TBuildMemInit, long) + 5059
+50  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x0000000103918894 CDocumentLogic::SongOpen() + 500
+51  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x000000010391a9cb AppInitDocument(CDocumentLogic*, InitMode) + 123
+52  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x0000000103fac7e7 0x1033ee000 + 12314599
+53  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x0000000103fad988 0x1033ee000 + 12319112
+54  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x00000001047887bc 0x1033ee000 + 20555708
+55  com.apple.AppKit              	0x00007fff2324df18 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 808
+56  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x0000000104ca322c 0x1033ee000 + 25907756
+57  com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+58  com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+59  com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+60  com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+61  com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+62  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+63  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+64  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+65  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+66  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+67  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+68  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+69  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+70  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+71  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+72  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+73  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+74  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x0000000104cac070 0x1033ee000 + 25944176
+75  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+76  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+77  06ef5246-4241-11ec-abb6-c73ab28f7572.mid	0x0000000103f3379d main + 333
+78  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:

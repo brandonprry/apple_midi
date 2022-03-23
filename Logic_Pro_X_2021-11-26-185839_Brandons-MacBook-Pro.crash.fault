@@ -1,0 +1,67 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libsystem_kernel.dylib        	0x00007fff203ae56e __abort_with_payload + 10
+1   libsystem_kernel.dylib        	0x00007fff203affbd abort_with_payload_wrapper_internal + 80
+2   libsystem_kernel.dylib        	0x00007fff203aff6d abort_with_reason + 19
+3   libobjc.A.dylib               	0x00007fff2027f9e3 _objc_fatalv(unsigned long long, unsigned long long, char const*, __va_list_tag*) + 114
+4   libobjc.A.dylib               	0x00007fff2027f971 _objc_fatal(char const*, ...) + 135
+5   libobjc.A.dylib               	0x00007fff2027f8a8 cache_t::bad_cache(objc_object*, objc_selector*) + 228
+6   libobjc.A.dylib               	0x00007fff2026e319 cache_t::insert(objc_selector*, void (*)(), objc_object*) + 225
+7   libobjc.A.dylib               	0x00007fff20260b77 lookUpImpOrForward + 541
+8   libobjc.A.dylib               	0x00007fff2026039b _objc_msgSend_uncached + 75
+9   com.apple.AppKit              	0x00007fff22d050ab rectForString + 272
+10  com.apple.AppKit              	0x00007fff22d04c8e _NSGetTextBoundingRect + 682
+11  com.apple.AppKit              	0x00007fff22d0468f ___NSGetTextCellBoundingRect_block_invoke + 163
+12  com.apple.AppKit              	0x00007fff22cace95 +[NSAppearance _performWithCurrentAppearance:usingBlock:] + 66
+13  com.apple.AppKit              	0x00007fff22d04563 _NSGetTextCellBoundingRect + 303
+14  com.apple.AppKit              	0x00007fff22d042b8 -[NSCell cellSizeForBounds:] + 280
+15  com.apple.AppKit              	0x00007fff22d03f3a -[NSTextFieldCell cellSizeForBounds:] + 77
+16  com.apple.AppKit              	0x00007fff22cf4288 -[NSCell cellSize] + 50
+17  com.apple.AppKit              	0x00007fff22d03e60 -[NSThemeFrame _size:ofCell:withTitle:] + 130
+18  com.apple.AppKit              	0x00007fff22d03d00 -[NSThemeFrame _titleCellSize] + 147
+19  com.apple.AppKit              	0x00007fff22cfeb21 -[NSThemeFrame _defaultTitlebarTitleRect] + 63
+20  com.apple.AppKit              	0x00007fff22cfeab6 -[NSThemeFrame _titlebarTitleRect] + 226
+21  com.apple.AppKit              	0x00007fff2350e66e -[NSTitledFrame setTitle:subtitle:] + 589
+22  com.apple.AppKit              	0x00007fff22d0b2d9 -[NSThemeFrame setTitle:] + 50
+23  com.apple.AppKit              	0x00007fff232b5e15 -[NSFrameView _updateTitleProperties:animated:] + 51
+24  com.apple.AppKit              	0x00007fff23501527 -[NSThemeFrame _updateTitleProperties:animated:] + 186
+25  com.apple.AppKit              	0x00007fff22cd8557 -[NSFrameView initWithFrame:styleMask:owner:] + 303
+26  com.apple.AppKit              	0x00007fff22cd82eb -[NSThemeFrame initWithFrame:styleMask:owner:] + 72
+27  com.apple.AppKit              	0x00007fff22cd6182 -[NSWindow _commonInitFrame:styleMask:backing:defer:] + 633
+28  com.apple.AppKit              	0x00007fff22cd59dc -[NSWindow _initContent:styleMask:backing:defer:contentView:] + 1098
+29  com.apple.AppKit              	0x00007fff22cd558b -[NSWindow initWithContentRect:styleMask:backing:defer:] + 42
+30  com.apple.LogicUIKit          	0x00000001102b069f 0x110175000 + 1291935
+31  04fff95e-4241-11ec-be02-b7353ecc7afe.mid	0x00000001089ee55b 0x108586000 + 4621659
+32  com.apple.AppKit              	0x00007fff22fdf83c -[NSWindow initWithContentRect:styleMask:backing:defer:screen:] + 52
+33  04fff95e-4241-11ec-be02-b7353ecc7afe.mid	0x0000000109465157 0x108586000 + 15593815
+34  04fff95e-4241-11ec-be02-b7353ecc7afe.mid	0x00000001094669b0 CLgCreateDocwWindow(WindowTypeID, CGRect, NSScreen*, signed char) + 224
+35  04fff95e-4241-11ec-be02-b7353ecc7afe.mid	0x0000000109388651 0x108586000 + 14689873
+36  04fff95e-4241-11ec-be02-b7353ecc7afe.mid	0x000000010938a4ba CreateDocwEditorWindow(CLgSongDocument*, WindowTypeID, CLgDocwState*, CLgCachedScreenSpace*) + 186
+37  04fff95e-4241-11ec-be02-b7353ecc7afe.mid	0x0000000109383160 0x108586000 + 14668128
+38  04fff95e-4241-11ec-be02-b7353ecc7afe.mid	0x00000001090eaa70 0x108586000 + 11946608
+39  com.apple.AppKit              	0x00007fff23247e9c -[NSDocumentController _finishOpeningDocument:andShowWindows:] + 75
+40  com.apple.AppKit              	0x00007fff2324df80 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 912
+41  04fff95e-4241-11ec-be02-b7353ecc7afe.mid	0x0000000109e3b22c 0x108586000 + 25907756
+42  com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+43  com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+44  com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+45  com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+46  com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+47  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+48  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+49  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+50  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+51  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+52  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+53  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+54  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+55  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+56  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+57  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+58  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+59  04fff95e-4241-11ec-be02-b7353ecc7afe.mid	0x0000000109e44070 0x108586000 + 25944176
+60  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+61  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+62  04fff95e-4241-11ec-be02-b7353ecc7afe.mid	0x00000001090cb79d main + 333
+63  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:

@@ -1,0 +1,30 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   488631ba-4238-11ec-80be-db5aefa4166f.mid	0x000000010de43f6d 0x10d286000 + 12312429
+1   488631ba-4238-11ec-80be-db5aefa4166f.mid	0x000000010de45988 0x10d286000 + 12319112
+2   488631ba-4238-11ec-80be-db5aefa4166f.mid	0x000000010e6207bc 0x10d286000 + 20555708
+3   com.apple.AppKit              	0x00007fff2324df18 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 808
+4   488631ba-4238-11ec-80be-db5aefa4166f.mid	0x000000010eb3b22c 0x10d286000 + 25907756
+5   com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+6   com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+7   com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+8   com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+9   com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+10  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+11  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+12  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+13  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+14  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+15  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+16  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+17  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+18  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+19  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+20  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+21  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+22  488631ba-4238-11ec-80be-db5aefa4166f.mid	0x000000010eb44070 0x10d286000 + 25944176
+23  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+24  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+25  488631ba-4238-11ec-80be-db5aefa4166f.mid	0x000000010ddcb79d main + 333
+26  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:: Dispatch queue: Private metadata write queue

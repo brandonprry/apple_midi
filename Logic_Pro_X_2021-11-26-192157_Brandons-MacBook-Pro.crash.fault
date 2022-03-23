@@ -1,0 +1,50 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libsystem_malloc.dylib        	0x00007fff201ebada small_size + 162
+1   libsystem_malloc.dylib        	0x00007fff201eb84b szone_size + 73
+2   libsystem_malloc.dylib        	0x00007fff201e8fcd free + 120
+3   com.apple.CoreGraphics        	0x00007fff24fd5357 __CGRegionDeallocate + 20
+4   com.apple.CoreFoundation      	0x00007fff2058536a _CFRelease + 244
+5   com.apple.CoreGraphics        	0x00007fff24fd531d CGSReleaseRegion + 9
+6   com.apple.AppKit              	0x00007fff22d15632 -[NSRegion setEmpty] + 61
+7   com.apple.AppKit              	0x00007fff22d153eb -[NSRegion translateBy:] + 70
+8   com.apple.AppKit              	0x00007fff22d151f2 -[NSWindow _adjustNeedsDisplayRegionForNewFrame:] + 129
+9   com.apple.AppKit              	0x00007fff22d13e79 -[NSWindow _setFrameCommon:display:fromServer:] + 1106
+10  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010bafc2da 0x10aa62000 + 17408730
+11  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010b7f2c15 0x10aa62000 + 14224405
+12  com.apple.Foundation          	0x00007fff212371a7 -[NSObject(NSThreadPerformAdditions) performSelector:onThread:withObject:waitUntilDone:modes:] + 928
+13  com.apple.Foundation          	0x00007fff21236ca4 -[NSObject(NSThreadPerformAdditions) performSelectorOnMainThread:withObject:waitUntilDone:] + 124
+14  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010b7f2d22 0x10aa62000 + 14224674
+15  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010baf9776 0x10aa62000 + 17397622
+16  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010bb3a27c CSongAudio::ClemensSongInit(TLogicSongVersion) + 540
+17  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010ab13f33 build_memory(CSong*, CDocumentLogic*, TBuildMemInit, long) + 5059
+18  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010af8c894 CDocumentLogic::SongOpen() + 500
+19  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010af8e9cb AppInitDocument(CDocumentLogic*, InitMode) + 123
+20  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010b6207e7 0x10aa62000 + 12314599
+21  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010b621988 0x10aa62000 + 12319112
+22  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010bdfc7bc 0x10aa62000 + 20555708
+23  com.apple.AppKit              	0x00007fff2324df18 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 808
+24  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010c31722c 0x10aa62000 + 25907756
+25  com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+26  com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+27  com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+28  com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+29  com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+30  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+31  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+32  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+33  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+34  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+35  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+36  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+37  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+38  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+39  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+40  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+41  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+42  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010c320070 0x10aa62000 + 25944176
+43  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+44  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+45  05beee68-4241-11ec-b272-3fcc36440088.mid	0x000000010b5a779d main + 333
+46  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:

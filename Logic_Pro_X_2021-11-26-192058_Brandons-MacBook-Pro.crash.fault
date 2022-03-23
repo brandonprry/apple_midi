@@ -1,0 +1,28 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   05b9f714-4241-11ec-ace0-432f8ca22b83.mid	0x0000000107688af7 PlugInControlChanged(CSong*, unsigned long, long, TAutoCallbackHint, long, EventSource) + 39
+1   05b9f714-4241-11ec-ace0-432f8ca22b83.mid	0x0000000107688ac3 PollPadEQCallbackQueue(CSong*) + 211
+2   05b9f714-4241-11ec-ace0-432f8ca22b83.mid	0x000000010757fc6a GetActAudioMeters(CSong*) + 138
+3   05b9f714-4241-11ec-ace0-432f8ca22b83.mid	0x000000010764c63f PrepareCurrAudioLevel(CSong*, int) + 3439
+4   05b9f714-4241-11ec-ace0-432f8ca22b83.mid	0x0000000107ba0ec7 experi() + 487
+5   05b9f714-4241-11ec-ace0-432f8ca22b83.mid	0x0000000107d4a54a uperiodic() + 58
+6   05b9f714-4241-11ec-ace0-432f8ca22b83.mid	0x00000001077b903f MacIdle() + 95
+7   05b9f714-4241-11ec-ace0-432f8ca22b83.mid	0x0000000108bd8f61 0x107328000 + 25890657
+8   05b9f714-4241-11ec-ace0-432f8ca22b83.mid	0x0000000107ed7067 0x107328000 + 12251239
+9   com.apple.Foundation          	0x00007fff21289e0f __NSFireTimer + 67
+10  com.apple.CoreFoundation      	0x00007fff204d3279 __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__ + 20
+11  com.apple.CoreFoundation      	0x00007fff204d2d6d __CFRunLoopDoTimer + 927
+12  com.apple.CoreFoundation      	0x00007fff204d28ca __CFRunLoopDoTimers + 307
+13  com.apple.CoreFoundation      	0x00007fff204b94a3 __CFRunLoopRun + 1988
+14  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+15  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+16  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+17  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+18  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+19  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+20  05b9f714-4241-11ec-ace0-432f8ca22b83.mid	0x0000000108be6070 0x107328000 + 25944176
+21  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+22  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+23  05b9f714-4241-11ec-ace0-432f8ca22b83.mid	0x0000000107e6d79d main + 333
+24  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:

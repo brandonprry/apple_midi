@@ -1,0 +1,44 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libsystem_kernel.dylib        	0x00007fff2039292e __pthread_kill + 10
+1   libsystem_pthread.dylib       	0x00007fff203c15bd pthread_kill + 263
+2   libsystem_c.dylib             	0x00007fff20316406 abort + 125
+3   libsystem_malloc.dylib        	0x00007fff201f6165 malloc_vreport + 548
+4   libsystem_malloc.dylib        	0x00007fff2020a7e9 malloc_zone_error + 183
+5   libsystem_malloc.dylib        	0x00007fff201eef58 small_free_list_remove_ptr_no_clear + 1270
+6   libsystem_malloc.dylib        	0x00007fff201ebed9 free_small + 634
+7   04f057ce-4241-11ec-9515-1f43938a5814.mid	0x0000000108550f1a CSongMemory::SortEventSequence(CEvHdr*, CEvHdr*, TNoteOnOffOrder) + 1658
+8   04f057ce-4241-11ec-9515-1f43938a5814.mid	0x00000001085507af CSongMemory::SortEventSequenceWithID(int) + 175
+9   04f057ce-4241-11ec-9515-1f43938a5814.mid	0x0000000107c6df19 0x10742d000 + 8654617
+10  04f057ce-4241-11ec-9515-1f43938a5814.mid	0x0000000107c6ae00 ReadMidiFile(CSong*, void const*, long, int, TPureLength, long, NSString*, TGInstID*) + 1296
+11  04f057ce-4241-11ec-9515-1f43938a5814.mid	0x0000000107c6a6ce ConvertMidiFileToSong(CSong*, MAMem const*, char, char, char, int, long, long, NSString*, TGInstID*) + 366
+12  04f057ce-4241-11ec-9515-1f43938a5814.mid	0x0000000107c6a4bc ConvertMemContainingMidiOrNotatorFileToLogicSong(MAMem&, NSString*) + 204
+13  04f057ce-4241-11ec-9515-1f43938a5814.mid	0x0000000107c6a38b ConvertDataContainingMidiOrNotatorFileToLogicDoc(NSData*, NSString*, CDocumentLogic*) + 155
+14  04f057ce-4241-11ec-9515-1f43938a5814.mid	0x0000000107feb7c7 0x10742d000 + 12314567
+15  04f057ce-4241-11ec-9515-1f43938a5814.mid	0x0000000107fec988 0x10742d000 + 12319112
+16  04f057ce-4241-11ec-9515-1f43938a5814.mid	0x00000001087c77bc 0x10742d000 + 20555708
+17  com.apple.AppKit              	0x00007fff2324df18 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 808
+18  04f057ce-4241-11ec-9515-1f43938a5814.mid	0x0000000108ce222c 0x10742d000 + 25907756
+19  com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+20  com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+21  com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+22  com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+23  com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+24  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+25  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+26  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+27  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+28  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+29  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+30  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+31  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+32  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+33  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+34  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+35  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+36  04f057ce-4241-11ec-9515-1f43938a5814.mid	0x0000000108ceb070 0x10742d000 + 25944176
+37  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+38  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+39  04f057ce-4241-11ec-9515-1f43938a5814.mid	0x0000000107f7279d main + 333
+40  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:

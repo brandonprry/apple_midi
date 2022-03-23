@@ -1,0 +1,46 @@
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libsystem_malloc.dylib        	0x00007fff2020a925 small_free_list_remove_ptr.cold.1 + 0
+1   libsystem_malloc.dylib        	0x00007fff201eea55 small_free_list_remove_ptr + 177
+2   libsystem_malloc.dylib        	0x00007fff201ea04c small_malloc_from_free_list + 359
+3   libsystem_malloc.dylib        	0x00007fff201e9877 small_malloc_should_clear + 259
+4   libsystem_malloc.dylib        	0x00007fff201e9692 szone_malloc_should_clear + 109
+5   com.apple.music.apps.MAAudioEngine	0x00000001097a4e73 0x109314000 + 4787827
+6   libsystem_malloc.dylib        	0x00007fff20202f3b _malloc_zone_malloc + 118
+7   libc++abi.dylib               	0x00007fff2038682a operator new(unsigned long) + 26
+8   id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x0000000104dda5ae 0x103f93000 + 14972334
+9   id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x0000000104da2526 GC::saveAttributes() + 150
+10  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x00000001055cb45a SetTextEventExtent(CSong*, CEvWithExt_Text*, ScEditor*) + 250
+11  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x0000000105106c50 CSongTextStyle::SeqTextStyleChange(CMSeq*, short) + 544
+12  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x00000001047d124d ReadMidiFile(CSong*, void const*, long, int, TPureLength, long, NSString*, TGInstID*) + 2397
+13  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x00000001047d06ce ConvertMidiFileToSong(CSong*, MAMem const*, char, char, char, int, long, long, NSString*, TGInstID*) + 366
+14  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x00000001047d04bc ConvertMemContainingMidiOrNotatorFileToLogicSong(MAMem&, NSString*) + 204
+15  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x00000001047d038b ConvertDataContainingMidiOrNotatorFileToLogicDoc(NSData*, NSString*, CDocumentLogic*) + 155
+16  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x0000000104b517c7 0x103f93000 + 12314567
+17  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x0000000104b52988 0x103f93000 + 12319112
+18  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x000000010532d7bc 0x103f93000 + 20555708
+19  com.apple.AppKit              	0x00007fff2324df18 -[NSDocumentController(NSDeprecated) openDocumentWithContentsOfURL:display:error:] + 808
+20  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x000000010584822c 0x103f93000 + 25907756
+21  com.apple.Foundation          	0x00007fff2122a49f __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+22  com.apple.Foundation          	0x00007fff2122a397 -[NSBlockOperation main] + 98
+23  com.apple.Foundation          	0x00007fff2122a32a __NSOPERATION_IS_INVOKING_MAIN__ + 17
+24  com.apple.Foundation          	0x00007fff212295de -[NSOperation start] + 785
+25  com.apple.Foundation          	0x00007fff212292af __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 17
+26  com.apple.Foundation          	0x00007fff21229182 __NSOQSchedule_f + 182
+27  libdispatch.dylib             	0x00007fff2022419e _dispatch_block_async_invoke2 + 83
+28  libdispatch.dylib             	0x00007fff20217806 _dispatch_client_callout + 8
+29  libdispatch.dylib             	0x00007fff20223b4f _dispatch_main_queue_callback_4CF + 940
+30  com.apple.CoreFoundation      	0x00007fff204f75a8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+31  com.apple.CoreFoundation      	0x00007fff204b97a2 __CFRunLoopRun + 2755
+32  com.apple.CoreFoundation      	0x00007fff204b861c CFRunLoopRunSpecific + 563
+33  com.apple.HIToolbox           	0x00007fff286fea83 RunCurrentEventLoopInMode + 292
+34  com.apple.HIToolbox           	0x00007fff286fe7e5 ReceiveNextEventCommon + 587
+35  com.apple.HIToolbox           	0x00007fff286fe583 _BlockUntilNextEventMatchingListInModeWithFilter + 70
+36  com.apple.AppKit              	0x00007fff22cc0172 _DPSNextEvent + 864
+37  com.apple.AppKit              	0x00007fff22cbe945 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1364
+38  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x0000000105851070 0x103f93000 + 25944176
+39  com.apple.AppKit              	0x00007fff22cb0c69 -[NSApplication run] + 586
+40  com.apple.AppKit              	0x00007fff22c84e6c NSApplicationMain + 816
+41  id:000235,src:000000+000012,op:splice,rep:32,+cov.mid	0x0000000104ad879d main + 333
+42  libdyld.dylib                 	0x00007fff203dcf3d start + 1
+
+Thread 1:
